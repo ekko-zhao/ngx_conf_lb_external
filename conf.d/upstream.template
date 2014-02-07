@@ -443,8 +443,8 @@ upstream user-zu {
     server  10.10.3.200:1700 weight=4; #app10-088
     server  10.10.3.211:1700 weight=4; #xapp10-084
     server  10.10.3.205:1700 weight=4; #one-679
-    server  10.10.3.117:1700 weight=7; #app10-118
-    server  10.10.3.118:1700 weight=7; #app10-119
+    #server  10.10.3.117:1700 weight=7; #app10-118
+    #server  10.10.3.118:1700 weight=7; #app10-119
 }
  
 upstream kfs-site-php {
