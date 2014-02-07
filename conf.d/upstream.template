@@ -1,0 +1,505 @@
+##anjuke.com
+
+###one.aifang.com/app-ifx-admin
+
+upstream upstream-java-one {
+    server  app10-018.i.ajkdns.com:50080 weight=900000;
+    server  app10-019.i.ajkdns.com:50080 weight=1;
+}
+
+###service.a.aifang.com
+
+upstream upstream-java-service-loupan {
+    server  app10-018.i.ajkdns.com:50080 weight=900000;
+    server  app10-019.i.ajkdns.com:50080 weight=1;
+}
+
+#app##service.a.aifang.com/app-sms/
+
+upstream upstream-java-sms-1 {
+    server  app10-023.i.ajkdns.com:50081 ;
+    server  app10-022.i.ajkdns.com:50081 backup;
+}
+
+###service.a.aifang.com/app-loupan/
+
+upstream upstream-java-loupan{
+    server  app10-018.i.ajkdns.com:50088 ;
+    server  app10-019.i.ajkdns.com:50088;
+}
+
+###xxx.aifang.com/comet/app-loupan/
+
+upstream upstream-java-loupan-comet{
+    #server  app10-018.i.ajkdns.com:50090 weight=1;
+    server  app10-020.i.ajkdns.com:50090 weight=900000;
+}
+
+###service.a.aifang.com/ip2city/
+upstream upstream-java-ip2city{
+    server  app10-021.i.ajkdns.com:1900 weight=2;
+    server  app10-024.i.ajkdns.com:1900 weight=2;
+    #server  app10-087.i.ajkdns.com:1900 weight=1;
+    #server  app10-088.i.ajkdns.com:1900 weight=1;
+    server  app10-052.i.ajkdns.com:1900 weight=10;
+    server  app10-051.i.ajkdns.com:1900 weight=10;
+}
+
+upstream upstream-java-shorturl{
+    server  app10-021.i.ajkdns.com:1900 weight=2;
+    server  app10-024.i.ajkdns.com:1900 weight=2;
+    #server  app10-087.i.ajkdns.com:1900 backup;
+    #server  app10-088.i.ajkdns.com:1900 backup;
+    server  app10-052.i.ajkdns.com:1900 weight=10;
+    server  app10-051.i.ajkdns.com:1900 weight=2;
+}
+
+upstream upstream-java-yui{
+    server  app10-021.i.ajkdns.com:1900 backup;
+    server  app10-024.i.ajkdns.com:1900 backup;
+    server  app10-087.i.ajkdns.com:1900 backup;
+    server  app10-088.i.ajkdns.com:1900 backup;
+    server  app10-052.i.ajkdns.com:1900;
+    server  app10-051.i.ajkdns.com:1900;
+}
+
+
+###touch.anjuke.com for java
+
+upstream upstream-java-touchweb-nospeed{
+    server  app10-087.i.ajkdns.com:50093 weight=1; #app10-087
+    server  app10-088.i.ajkdns.com:50093 weight=1; #app10-088
+    server  app10-050.i.ajkdns.com:50093 weight=3; #app10-050
+}
+
+upstream upstream-java-touchweb-speed{
+    server  app10-021.i.ajkdns.com:50093 weight=1; #app10-021
+    server  app10-024.i.ajkdns.com:50093 weight=1; #
+}
+
+###touch.anjuke.com for java
+upstream upstream-java-touchweb-beta{
+    server  10.10.3.19:50093; #app10-018
+}
+
+### www api my vip one press ...
+upstream upstream-php-member {
+    server  10.10.3.19:40080; #app10-018
+    server  10.10.3.20:40080 backup; #app10-019
+    server  10.10.3.21:40080 backup; #app10-020
+    server  10.10.3.150:40080 backup; #app10-022
+}
+
+### city no cache ...
+upstream upstream-php-sites {
+    server  10.10.3.19:40080 weight=30; #app10-018
+    server  10.10.3.20:40080 weight=30; #app10-019
+    server  10.10.3.21:40080 weight=30; #app10-020
+    server  10.10.3.150:40080 weight=10; #app10-022
+}
+
+### city.aifang.com
+upstream upstream-php-varnish{
+    server  10.10.3.23:30080 weight=900000; #app10-025
+    server  10.10.3.36:8081 weight=100000;  #app10-038
+    server  10.10.3.39:8081 weight=100000;  #app10-041
+    server  10.10.3.150:40080 weight=1; #app10-022
+    server  10.10.3.21:40080 weight=1; #app10-020
+    server  10.10.3.20:40080 weight=1; #app10-019
+    server  10.10.3.19:40080 weight=1; #app10-018
+}
+
+### online preview
+upstream upstream-online-preview {
+    server 10.10.3.151:40080; #app10-023
+}
+
+
+upstream upstream-online-dev {
+    server 10.10.3.151:40080; #app10-023
+}
+
+upstream upstream-chart-cdn {
+    #consistent_hash $http_x_forwarded_for;
+    server  10.10.3.19:40080; #app10-018
+    server  10.10.3.20:40080; #app10-019
+    server  10.10.3.21:40080; #app10-020
+}
+
+
+upstream upstream-string-match {
+    server 10.10.3.22:52005; #app10-021
+    server 10.10.3.150:52005; #app10-022
+    server 10.10.3.151:52005; #app10-023
+}
+
+upstream upstream-service-segment {
+    server 10.10.3.22:50089; #app10-021
+    server 10.10.3.152:50089 backup; #app10-024
+}
+
+#ujs
+upstream upstream-jockjs-ujs {
+    server 10.10.3.22:52101; #app10-021
+    server 10.10.3.152:52101; #app10-024
+}
+
+upstream upstream-jockjs-ucss {
+    server 10.10.3.22:52201; #app10-021
+    server 10.10.3.152:52201; #app10-024
+}
+
+#djs
+upstream upstream-jockjs-djs {
+    server 10.10.3.22:52102; #app10-021
+    server 10.10.3.152:52102; #app10-024
+}
+
+upstream upstream-jockjs-dcss {
+    server 10.10.3.22:52202; #app10-021
+    server 10.10.3.152:52202; #app10-024
+}
+
+#tjs
+upstream upstream-jockjs-tjs {
+    server 10.10.3.22:52103; #app10-021
+    server 10.10.3.152:52103; #app10-024
+}
+
+upstream upstream-jockjs-tcss {
+    server 10.10.3.22:52203; #app10-021
+    server 10.10.3.152:52203; #app10-024
+}
+
+
+upstream upstream-java-activation{
+    server  10.10.3.22:1901 weight=2 backup; #app10-021
+    server  10.10.3.152:1901 weight=2 backup; #app10-024
+    server  10.10.3.155:1901 weight=10; #app10-052
+}
+
+upstream upstream-java-service{
+    server  10.10.3.22:1900 weight=2; #app10-021
+    server  10.10.3.152:1900 weight=2; #app10-024
+    server  10.10.3.155:1900 weight=10; #app10-052
+    server  10.10.3.154:1900 weight=2; #app10-051
+    #server  app10-087.i.ajkdns.com:1900 backup;
+    #server  app10-088.i.ajkdns.com:1900 backup;
+}
+
+upstream upstream-java-ifx {
+    server  10.10.3.150:50086 weight=900000; #app10-022
+    server  10.10.3.151:50086 weight=900000; #app10-023
+}
+
+upstream upstream-java-touchweb{
+
+    #server  app10-025.i.ajkdns.com:20081 weight=50;
+    #server  app10-021.i.ajkdns.com:50093 weight=50;
+    #server  app10-024.i.ajkdns.com:50093 weight=50;
+    #server  app10-087.i.ajkdns.com:50093 weight=100;
+    #server  app10-088.i.ajkdns.com:50093 weight=100;
+    #server  app10-050.i.ajkdns.com:50093 weight=500;
+    server  10.10.3.22:1902 weight=50; #app10-021
+    server  10.10.3.152:1902 weight=50; #app10-024
+    server  10.10.3.154:1902 weight=500; #app10-051
+    server  10.10.3.155:1902 weight=500; #app10-052
+}
+
+
+upstream  anjuke-v1-backend {
+    {%45%}
+}
+
+upstream  anjuke-v2-backend {
+    {%44%}
+}
+
+upstream  anjuke-v2-sale {
+    server 10.10.3.2:20080 weight=10; #app10-001
+    server 10.10.3.3:20080 backup;    #app10-002
+}
+
+upstream anjuke-sale {
+    {%50%}
+}
+
+upstream  anjuke-prop-view {
+    {%51%}
+}
+
+upstream  anjuke-pages {
+    server 10.10.3.15:20080 max_fails=3 fail_timeout=3s; #app10-014
+    server 10.10.3.16:20080 max_fails=3 fail_timeout=3s; #app10-015
+}
+
+upstream  sina-static {
+    server 10.10.3.15:8080 max_fails=3 fail_timeout=3s; #app10-014
+    server 10.10.3.16:8080 max_fails=3 fail_timeout=3s; #app10-015
+}
+
+upstream  anjuke-include-member {
+    server 10.10.6.181:80 weight=9;
+    server 10.10.6.180:80 weight=1;
+}
+
+
+# AI FANG
+# =======
+
+upstream aifang-member {
+    #server 10.10.3.23:20081 weight=10000000;
+    server 10.10.3.19:40080 weight=1; #app10-018
+    server 10.10.3.20:40080 weight=1; #app10-019
+    server 10.10.3.21:40080 weight=1; #app10-020
+    server 10.10.3.150:40080 weight=1; #app10-022
+}
+upstream aifang-chart {
+    server 10.10.3.47:80; #app10-049
+}
+
+upstream aifang-varnish{
+    server 10.10.3.47:30080; #app10-049
+    server 10.10.3.20:40080 backup; #app10-019
+    server 10.10.3.21:40080 backup; #app10-020
+}
+
+upstream aifang-java {
+    #server 10.10.3.23:20081 weight=10000000;
+    #server app10-021.i.ajkdns.com:50086 weight=1;
+    server 10.10.3.150:50086 weight=1; #app10-022
+    server 10.10.3.151:50086 weight=1; #app10-023
+}
+
+upstream upstream-java-msc {
+    server 10.10.3.150:50084; #app10-022
+    server 10.10.3.151:50084; #app10-023
+}
+
+upstream anjuke-bbs {
+    #server 10.10.3.24:80 weight=7; #app10-026
+    server 10.10.6.179:80 weight=3; #xapp10-026
+}
+upstream my-app {
+    {%24%}
+}
+
+upstream my-cd {
+    server 10.10.3.81:20090 weight=10;  #app10-081
+    server 10.10.3.83:20090 weight=10;  #app10-083
+}
+
+upstream rental {
+    server 10.10.3.2:20080; #app10-001
+    server 10.10.3.14:20080; #app10-013
+    server 10.10.3.16:20080; #app10-015
+}
+
+upstream anjuke-member {
+    server 10.10.6.181:80 weight=5; #xapp10-028
+    server 10.10.6.180:80 weight=5; #xapp10-027
+}
+
+upstream mendian {
+    server 10.10.3.201:20080 weight=4; #app10-092
+    server 10.10.6.182:20080 weight=3; #xapp10-029
+    server 10.10.6.183:20080 weight=2; #xapp10-030
+} 
+
+upstream api-anjuke {
+    {%53%}
+}
+
+upstream open-api {
+   server 10.10.3.30:8088 weight=2;
+   server 10.10.6.154:8088 weight=1;
+}
+
+upstream mobile-push-notify {
+    server 10.10.3.50:50090; #app10-055
+    server 10.10.3.35:50090; #app10-037
+}
+ 
+upstream tools {
+    server 10.10.6.186:20080;
+    server 10.10.6.187:20080 backup;
+} 
+
+# JIN PU
+# ======
+
+upstream jinpu-member {
+    server 10.10.3.44:80; #app10-046
+    server 10.10.6.193:80 backup; #xapp10-036
+}
+
+upstream jinpu-app {
+    server 10.10.3.44:80 weight=50; #app10-046
+    server 10.10.3.45:80 weight=49; #app10-047
+    server 10.10.3.244:20090 weight=1; #app10-091
+    server 10.10.6.193:80 backup; #xapp10-036
+}
+
+upstream api-jinpu {
+    server 10.10.3.154:1700 weight=5; #app10-051
+    server 10.10.3.50:1700 weight=5; #app10-055
+}
+
+upstream jinpu-varnish {
+    server 10.10.6.193:20081; #xapp10-036
+}
+
+
+
+upstream varnish {
+    server 10.10.3.18:20081;
+    server 10.10.3.3:20080 backup; #app10-002
+}
+upstream one_anjuke {
+    server 10.10.6.208:41180; #xapp10-078
+    server 10.10.6.166:8081 backup; #xapp10-017
+}
+
+upstream daimg01 {
+    server 10.10.6.208:3128; #xapp10-078
+}
+
+
+# WAP
+# ===
+upstream wap {
+    {%93%}
+}
+
+upstream v2-static {
+    server 10.10.3.15:20080 weight=1; #app10-014
+    server 10.10.3.16:20080 weight=5; #app10-015
+}
+
+upstream android {
+    server 10.10.6.175:20080;   #xapp10-022
+}
+
+
+# FORUM
+# =====
+upstream forum-app {
+    server 10.10.3.42:20080; #app10-044
+    #server 10.10.3.42:20081 weight=4; #app10-044
+}
+
+# ICS
+# ===
+upstream ics-beta {
+    server 10.10.6.210:8080; #xapp10-049
+}
+upstream ics {
+    #server 10.10.6.165:8088; #xapp10-016
+    {%91%}
+}
+
+upstream idc10-squid {
+    hash $request_uri;
+    server 10.10.3.10:3128; #app10-009
+    server 10.10.3.18:3128; #app10-017
+}
+
+# Internal Api
+# ============
+
+upstream acenterapi {
+    server 10.10.3.66:20080;
+    server 10.10.3.72:20080;
+    server 10.10.3.32:20081 backup;
+    server 10.10.3.33:20081 backup;
+    server 10.10.3.34:20081 backup;
+}
+
+upstream s {
+    {%31%}
+}
+
+upstream oa {
+    {%33%}
+    server 10.10.6.239:80 backup; #xapp10-081
+}
+
+upstream other {
+    server 10.10.6.221:80;
+    server 10.10.6.232:80;
+}
+
+# User
+# ====
+
+upstream user-zu-jinpu {
+    server  10.10.3.22:1700 weight=7; #app10-021
+    server  10.10.3.152:1700 weight=7; #app10-024
+    server  10.10.3.203:1700 weight=5; #app10-087
+    server  10.10.3.200:1700 weight=4; #app10-088
+    server  10.10.3.211:1700 weight=4; #xapp10-084
+    server  10.10.3.205:1700 weight=4; #one-679
+}
+
+upstream user-zu {
+    server  10.10.3.22:1700 weight=7; #app10-021
+    server  10.10.3.152:1700 weight=7; #app10-024
+    server  10.10.3.203:1700 weight=5; #app10-087
+    server  10.10.3.200:1700 weight=4; #app10-088
+    server  10.10.3.211:1700 weight=4; #xapp10-084
+    server  10.10.3.205:1700 weight=4; #one-679
+    server  10.10.3.117:1700 weight=7; #app10-118
+    server  10.10.3.118:1700 weight=7; #app10-119
+}
+ 
+upstream kfs-site-php {
+    server 10.10.3.19:40080; #app10-018
+    server 10.10.3.20:40080; #app10-019
+    server 10.10.3.21:40080; #app10-020
+    server 10.10.3.150:40080; #app10-022
+}
+
+upstream kfs-beta-php {
+    server 10.10.3.151:40080; #app10-023
+}
+
+upstream zufang {
+    #server 10.10.3.4:20080; #app10-003
+    server 10.10.3.244:20090 weight=1; #app10-091
+    server 10.10.3.6:20080 weight=33; #app10-005
+    server 10.10.3.7:20080 weight=33; #app10-006
+    server 10.10.6.30:20080 weight=33; #idx10-001
+}
+
+upstream jinpu-app-anjuke {
+    server 10.10.3.45:80; #app10-047
+}
+
+upstream mendian-zufang {
+    server 10.10.3.6:80; #app10-005
+    server 10.10.3.7:80; #app10-006
+}
+
+upstream mendian-jinpu {
+    server 10.10.3.44:80; #app10-046
+    server 10.10.3.45:80; #app10-047
+}
+
+upstream sms {
+    server 10.10.6.202:80; #xapp10-045
+}
+
+upstream cms {
+    server 10.10.6.186:8080; #xapp10-031
+    server 10.10.6.187:8080; #xapp10-032
+}
+
+upstream i-app {
+    server 10.10.3.196:8080; #app10-112
+    server 10.10.3.197:8080; #app10-113
+}
+
+upstream pages-ajkcdn {
+    server 10.10.3.153:1700; #app10-050
+    server 10.10.3.154:1700; #app10-051
+}
