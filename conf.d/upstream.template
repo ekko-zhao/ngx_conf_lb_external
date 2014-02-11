@@ -279,6 +279,10 @@ upstream my-app {
     {%24%}
 }
 
+upstream my-app-new {
+    server 10.10.3.244:20090; #app10-091
+}
+
 upstream my-cd {
     server 10.10.3.81:20090 weight=10;  #app10-081
     server 10.10.3.83:20090 weight=10;  #app10-083
@@ -443,8 +447,8 @@ upstream user-zu {
     server  10.10.3.200:1700 weight=4; #app10-088
     server  10.10.3.211:1700 weight=4; #xapp10-084
     server  10.10.3.205:1700 weight=4; #one-679
-    #server  10.10.3.117:1700 weight=7; #app10-118
-    #server  10.10.3.118:1700 weight=7; #app10-119
+    server  10.10.3.117:1700 weight=4; #app10-118
+    server  10.10.3.118:1700 weight=4; #app10-119
 }
  
 upstream kfs-site-php {
