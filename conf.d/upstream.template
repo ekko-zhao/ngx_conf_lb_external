@@ -188,9 +188,9 @@ upstream upstream-java-service{
 }
 
 upstream upstream-java-ifx {
-    server  10.10.3.150:50086 weight=95; #app10-022
+    server  10.10.3.150:50086 weight=10; #app10-022
     server  10.10.3.151:50086 weight=95; #app10-023
-    server  10.10.3.111:50086 weight=10; #app10-120
+    server  10.10.3.111:50086 weight=95; #app10-120
 }
 
 upstream upstream-java-touchweb{
