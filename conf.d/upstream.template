@@ -188,8 +188,8 @@ upstream upstream-java-service{
 }
 
 upstream upstream-java-ifx {
-    server 10.10.3.116:50086 weight=10; #app10-121
-    server  10.10.3.151:50086 weight=95; #app10-023
+    server 10.10.3.116:50086 weight=95; #app10-121
+    server  10.10.3.151:50086 weight=10; #app10-023
     server  10.10.3.111:50086 weight=95; #app10-120
 }
 
