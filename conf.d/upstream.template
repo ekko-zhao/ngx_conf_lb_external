@@ -285,6 +285,7 @@ upstream my-app-jinpu {
     server 10.10.3.44:80 weight=50; #app10-046
     server 10.10.3.45:80 weight=49; #app10-047
     server 10.10.3.32:20090 weight=3; #app10-034
+    server 10.10.3.33:20090 weight=3; #app10-035
     server 10.10.3.34:20090 weight=3; #app10-036
     server 10.10.3.193:20090 weight=3; #app10-090
     server 10.10.3.247:20090 weight=3; #app10-091
@@ -293,6 +294,7 @@ upstream my-app-jinpu {
 
 upstream my-app-new {
     server 10.10.3.32:20090 weight=3; #app10-034
+    server 10.10.3.33:20090 weight=3; #app10-035
     server 10.10.3.34:20090 weight=3; #app10-036
     server 10.10.3.193:20090 weight=3; #app10-090
     server 10.10.3.247:20090 weight=3; #app10-091
@@ -492,6 +494,7 @@ upstream kfs-beta-php {
 upstream zufang {
     #server 10.10.3.4:20080; #app10-003
     server 10.10.3.32:20090 weight=3; #app10-034
+    server 10.10.3.33:20090 weight=3; #app10-035
     server 10.10.3.34:20090 weight=3; #app10-036
     server 10.10.3.193:20090 weight=3; #app10-090
     server 10.10.3.247:20090 weight=3; #app10-091
