@@ -335,6 +335,14 @@ upstream upstream-weiliao {
    # server 10.10.3.155:1700; #app10-052
 }
 
+upstream upstream-cookie-service{
+    server  10.10.3.22:1900 weight=4; #app10-021
+    server  10.10.3.152:1900 weight=4; #app10-024
+    server  10.10.3.154:1900 weight=4; #app10-051
+    server  10.10.3.155:1905 weight=10; #app10-052
+    server  10.10.3.153:1905 weight=10; #app10-050
+}
+
 upstream mobile-push-notify {
     server 10.10.3.50:50090; #app10-055
     server 10.10.3.35:50090; #app10-037
