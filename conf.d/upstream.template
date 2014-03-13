@@ -479,7 +479,6 @@ upstream user-zu {
     server  10.10.3.200:1700 weight=4; #app10-088
     server  10.10.3.117:1700 weight=10; #app10-118
     server  10.10.3.118:1700 weight=13; #app10-119
-    server  10.10.3.179:1700 weight=5; #test10-001
 }
 
 upstream user-jinpu {
@@ -489,7 +488,6 @@ upstream user-jinpu {
     server  10.10.3.200:1700 weight=4; #app10-088
     server  10.10.3.117:1700 weight=10; #app10-118
     server  10.10.3.118:1700 weight=13; #app10-119
-    server  10.10.3.179:1700 weight=5; #test10-001
 }
  
 upstream kfs-site-php {
