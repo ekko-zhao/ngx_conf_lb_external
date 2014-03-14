@@ -336,7 +336,7 @@ upstream open-api {
 
 upstream upstream-weiliao {
     server 10.10.3.153:1700; #app10-050
-   # server 10.10.3.155:1700; #app10-052
+    server 10.10.3.155:1700; #app10-052
 }
 
 upstream upstream-cookie-service{
