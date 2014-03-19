@@ -171,6 +171,16 @@ upstream upstream-jockjs-tcss {
     server 10.10.3.152:52203; #app10-024
 }
 
+#pjs
+upstream upstream-jockjs-pjs {
+    server 10.10.3.22:52104; #app10-021
+    server 10.10.3.152:52104; #app10-024
+}
+
+upstream upstream-jockjs-pcss {
+    server 10.10.3.22:52204; #app10-021
+    server 10.10.3.152:52204; #app10-024
+}
 
 upstream upstream-java-activation{
     server  10.10.3.22:1901 weight=2 backup; #app10-021
