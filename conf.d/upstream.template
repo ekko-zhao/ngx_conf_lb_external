@@ -339,6 +339,11 @@ upstream mendian {
     server 10.10.6.183:20080 weight=1; #xapp10-030
 } 
 
+upstream include-mendian {
+    server 10.10.3.201:20080; #app10-092
+    server 10.10.3.198:20080; #app10-114
+} 
+
 upstream api-anjuke {
     {%53%}
 }
