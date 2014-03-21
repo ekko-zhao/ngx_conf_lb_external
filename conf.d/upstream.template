@@ -256,7 +256,7 @@ upstream  sina-static {
 
 upstream  anjuke-include-member {
     server 10.10.6.181:80 weight=9;
-    server 10.10.6.180:80 weight=1;
+    #server 10.10.6.180:80 weight=1;
 }
 
 
@@ -330,7 +330,7 @@ upstream rental {
 
 upstream anjuke-member {
     server 10.10.6.181:80 weight=5; #xapp10-028
-    server 10.10.6.180:80 weight=5; #xapp10-027
+    # server 10.10.6.180:80 weight=5; #xapp10-027
 }
 
 upstream mendian {
