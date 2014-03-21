@@ -214,6 +214,14 @@ upstream upstream-java-touchweb{
     server  10.10.3.155:1902 weight=500; #app10-052
 }
 
+upstream m-anjuke-php {
+    server 10.10.3.22:1700; #app10-021
+    server 10.10.3.152:1700; #app10-024
+    server 10.10.3.200:1700; #app10-088
+    server 10.10.3.203:1700; #app10-087
+    server 10.10.3.117:1700; #app10-118
+    server 10.10.3.118:1700; #app10-119
+}
 
 upstream  anjuke-v1-backend {
     {%45%}
