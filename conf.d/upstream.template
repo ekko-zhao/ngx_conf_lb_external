@@ -25,7 +25,6 @@ upstream upstream-java-sms-1 {
 ###service.a.aifang.com/app-loupan/
 
 upstream upstream-java-loupan{
-    server 10.10.3.19:50088 weight=1; #app10-018
     server 10.10.3.111:50088 weight=95; #app10-120
     server 10.10.3.116:50088 weight=95; #app10-121
 }
@@ -201,7 +200,6 @@ upstream upstream-java-service{
 
 upstream upstream-java-ifx {
     server 10.10.3.116:50086 weight=95; #app10-121
-    server  10.10.3.151:50086 weight=10; #app10-023
     server  10.10.3.111:50086 weight=95; #app10-120
 }
 
