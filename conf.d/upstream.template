@@ -98,13 +98,10 @@ upstream upstream-php-sites {
 
 ### city.aifang.com
 upstream upstream-php-varnish{
-    server  10.10.3.23:30080 weight=900000; #app10-025
-    server  10.10.3.36:8081 weight=100000;  #app10-038
-    server  10.10.3.39:8081 weight=100000;  #app10-041
-    server  10.10.3.150:40080 weight=1; #app10-022
-    server  10.10.3.21:40080 weight=1; #app10-020
-    server  10.10.3.20:40080 weight=1; #app10-019
-    server  10.10.3.19:40080 weight=1; #app10-018
+    hash $request_uri;
+    server  10.10.3.23:30080; #app10-025
+    server  10.10.3.36:8081;  #app10-038
+    server  10.10.3.39:8081;  #app10-041
 }
 
 ### online preview
@@ -509,13 +506,6 @@ upstream user-include{
     server 10.10.3.154:1700; #app10-051
 }
 
-upstream user-include-ajk{
-    server 10.10.3.153:1700; #app10-050
-    server 10.10.3.154:1700; #app10-051
-    server 10.10.3.15:20080; #app10-014
-    server 10.10.3.16:20080; #app10-015
-}
- 
 upstream kfs-site-php {
     server 10.10.3.19:40080; #app10-018
     server 10.10.3.20:40080; #app10-019
