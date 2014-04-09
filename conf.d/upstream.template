@@ -207,6 +207,11 @@ upstream upstream-java-service{
     #server  app10-088.i.ajkdns.com:1900 backup;
 }
 
+upstream upstream-java-service-ifx {
+    server 10.10.3.116:50080 ; #app10-121
+    server 10.10.3.111:50080 ; #app10-120
+}
+
 upstream upstream-java-ifx {
     server 10.10.3.116:50086 weight=95; #app10-121
     server  10.10.3.111:50086 weight=95; #app10-120
