@@ -560,3 +560,8 @@ upstream pages-ajkcdn {
     server 10.10.3.153:1700; #app10-050
     server 10.10.3.154:1700; #app10-051
 }
+
+upstream upstream-java-adm {
+    server 10.10.3.111:50096; #app10-120
+    server 10.10.3.116:50096; #app10-121
+}
