@@ -94,6 +94,7 @@ upstream upstream-php-sites {
     server  10.10.3.20:40080 weight=30; #app10-019
     server  10.10.3.21:40080 weight=30; #app10-020
     server  10.10.3.150:40080 weight=10; #app10-022
+    server  10.10.3.109:80 weight=1; #app10-145
 }
 
 ### city.aifang.com
