@@ -322,7 +322,7 @@ upstream anjuke-member {
 }
 
 upstream mendian {
-    server 10.10.3.201:20080 weight=1; #app10-092
+    # server 10.10.3.201:20080 weight=1; #app10-092
     # server 10.10.3.198:20080 weight=20; #app10-114
     server 10.10.3.185:20080 weight=20; #app10-135
     server 10.10.3.199:20080 weight=20; #app10-139
