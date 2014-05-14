@@ -277,7 +277,7 @@ upstream aifang-member {
     server 10.10.3.19:40080 weight=10; #app10-018
     server 10.10.3.20:40080 weight=10; #app10-019
     server 10.10.3.21:40080 weight=10; #app10-020
-    server 10.10.3.109:80 weight=1; #app10-145
+    server 10.10.3.109:80 weight=15; #app10-145
 }
 upstream aifang-chart {
     server 10.10.3.47:80; #app10-049
