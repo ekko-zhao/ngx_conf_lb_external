@@ -4,3 +4,4 @@ ssl/
 *.key
 *.pem
 *.tgz
+*.swap
