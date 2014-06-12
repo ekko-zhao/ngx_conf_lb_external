@@ -438,6 +438,7 @@ upstream v2-static {
 
 upstream android {
     server 10.10.3.90:1700;   #app10-126
+    server 10.10.3.91:1700 backup; #app10-127
 }
 
 
