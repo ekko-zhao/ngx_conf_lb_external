@@ -232,7 +232,6 @@ upstream m-anjuke-php {
     server 10.10.3.22:1700; #app10-021
     server 10.10.3.152:1700; #app10-024
     server 10.10.3.117:1700; #app10-118
-    server 10.10.3.118:1700; #app10-119
     server 10.10.3.125:1700; #app10-148
 }
 
