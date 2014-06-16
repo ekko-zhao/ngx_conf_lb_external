@@ -54,9 +54,6 @@ upstream upstream-java-shorturl{
 }
 
 upstream upstream-java-yui{
-    server  app10-021.i.ajkdns.com:1900 backup;
-    server  app10-024.i.ajkdns.com:1900 backup;
-    server  app10-088.i.ajkdns.com:1900 backup;
     server  app10-052.i.ajkdns.com:1900;
     server  app10-051.i.ajkdns.com:1900;
 }
@@ -93,6 +90,7 @@ upstream upstream-php-sites {
     server  10.10.3.20:40080 weight=30; #app10-019
     server  10.10.3.21:40080 weight=30; #app10-020
     server  10.10.3.109:80 weight=50; #app10-145
+    server  10.10.3.139:80 weight=1; #app10-183
 }
 
 ### city.aifang.com
@@ -118,6 +116,7 @@ upstream upstream-chart-cdn {
     server  10.10.3.20:40080; #app10-019
     server  10.10.3.21:40080; #app10-020
     server  10.10.3.109:80; #app10-145
+    server  10.10.3.139:80; #app10-183
 }
 
 
@@ -287,6 +286,7 @@ upstream aifang-member {
     server 10.10.3.20:40080 weight=10; #app10-019
     server 10.10.3.21:40080 weight=10; #app10-020
     server 10.10.3.109:80 weight=15; #app10-145
+    server 10.10.3.139:80 weight=1; #app10-183
 }
 upstream aifang-chart {
     server 10.10.3.47:80; #app10-049
@@ -492,23 +492,17 @@ upstream other {
 # ====
 
 upstream user-zu-jinpu {
-    server  10.10.3.22:1700 weight=7; #app10-021
-    server  10.10.3.152:1700 weight=7; #app10-024
-    server  10.10.3.200:1700 weight=4; #app10-088
     server  10.10.3.117:1700 weight=2; #app10-118
-    server  10.10.3.118:1700 weight=2; #app10-119
     server  10.10.3.125:1700 weight=2; #app10-148
 }
 
 upstream user-zu {
     server  10.10.3.117:1700 weight=10; #app10-118
-    server  10.10.3.118:1700 weight=13; #app10-119
     server  10.10.3.125:1700 weight=10; #app10-148
 }
 
 upstream user-jinpu {
     server  10.10.3.117:1700 weight=10; #app10-118
-    server  10.10.3.118:1700 weight=13; #app10-119
     server  10.10.3.125:1700 weight=10; #app10-148
 }
 
@@ -522,6 +516,7 @@ upstream kfs-site-php {
     server 10.10.3.20:40080; #app10-019
     server 10.10.3.21:40080; #app10-020
     server 10.10.3.109:80; #app10-145
+    server 10.10.3.139:80; #app10-183
 }
 
 upstream kfs-beta-php {
