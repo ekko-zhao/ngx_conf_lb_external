@@ -565,3 +565,8 @@ upstream supplier-channel {
     server 10.10.3.90:1700; #app10-126
     server 10.10.3.91:1700 backup; #app10-127
 }
+
+upstream job-campus {
+server 10.10.9.27:8080; #app10-196
+server 10.10.9.29:8080; #app10-197
+}
