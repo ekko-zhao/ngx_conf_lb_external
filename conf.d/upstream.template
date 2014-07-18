@@ -578,3 +578,13 @@ upstream chat-cms {
     server 10.10.3.92:1700 backup; #app10-128
     server 10.10.3.93:1700 backup; #app10-129
 }
+
+upstream user-varnish {
+    server 10.10.3.39:8080 weight=100000; #app10-041 varnish
+    server 10.10.3.126:1700 weight=1; #app10-149
+    server 10.10.3.127:1700 weight=1; #app10-150
+    server 10.10.3.128:1700 weight=1; #app10-151
+    server 10.10.3.129:1700 weight=1; #app10-152
+    server 10.10.3.159:1700 weight=1; #app10-198
+    server 10.10.3.160:1700 weight=1; #app10-199
+}
