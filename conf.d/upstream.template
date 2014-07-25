@@ -347,7 +347,7 @@ upstream api-anjuke {
 
 upstream user-site-api {
     server 10.10.3.89:1700 weight=1; #app10-125
-    server 10.10.3.90:1700 weight=1; #app10-126
+    #server 10.10.3.90:1700 weight=1; #app10-126
     server 10.10.3.91:1700 weight=1; #app10-127
     server 10.10.3.92:1700 weight=1; #app10-128
     server 10.10.3.93:1700 weight=1; #app10-129
@@ -360,7 +360,7 @@ upstream open-api {
 
 upstream upstream-weiliao {
     server 10.10.3.89:1700 weight=4; #app10-125
-    server 10.10.3.90:1700 weight=4; #app10-126
+    #server 10.10.3.90:1700 weight=4; #app10-126
     server 10.10.3.91:1700 weight=16; #app10-127
     server 10.10.3.92:1700 weight=16; #app10-128
     server 10.10.3.93:1700 weight=16; #app10-129
@@ -375,7 +375,7 @@ upstream upstream-cookie-service{
 }
 
 upstream mobile-push-notify {
-    server 10.10.3.90:50090; #app10-126
+    #server 10.10.3.90:50090; #app10-126
     server 10.10.3.91:50090; #app10-127
 }
  
@@ -400,7 +400,7 @@ upstream jinpu-app {
 
 upstream api-jinpu {
     server 10.10.3.89:1700 weight=1; #app10-125
-    server 10.10.3.90:1700 weight=1; #app10-126
+    #server 10.10.3.90:1700 weight=1; #app10-126
 }
 
 upstream jinpu-varnish {
@@ -435,8 +435,8 @@ upstream v2-static {
 }
 
 upstream android {
-    server 10.10.3.90:1700;   #app10-126
-    server 10.10.3.91:1700 backup; #app10-127
+    #server 10.10.3.90:1700;   #app10-126
+    server 10.10.3.91:1700; #app10-127
 }
 
 
@@ -574,8 +574,8 @@ upstream upstream-java-adm {
 }
 
 upstream supplier-channel {
-    server 10.10.3.90:1700; #app10-126
-    server 10.10.3.91:1700 backup; #app10-127
+    #server 10.10.3.90:1700; #app10-126
+    server 10.10.3.91:1700; #app10-127
 }
 
 upstream job-campus {
