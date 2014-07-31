@@ -604,3 +604,7 @@ upstream apns-api {
     server 10.10.3.93:1904; #app10-129
 }
 
+upstream xinfang-prism {
+    server 10.10.3.20:40080; #app10-019
+    server 10.10.3.21:40080; #app10-020
+}
