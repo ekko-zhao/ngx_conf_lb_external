@@ -31,44 +31,44 @@ upstream upstream-java-loupan{
 
 upstream upstream-java-loupan-comet{
     #server  10.10.3.19:50090 weight=1; #app10-018
-    server  app10-020.i.ajkdns.com:50090 weight=900000;
+    server  10.10.3.21:50090 weight=900000; #app10-020
 }
 
 ###service.a.aifang.com/ip2city/
 upstream upstream-java-ip2city{
-    server  app10-021.i.ajkdns.com:1900 weight=2;
-    server  app10-024.i.ajkdns.com:1900 weight=2;
+    server  10.10.3.22:1900 weight=2; #app10-021
+    server  10.10.3.152:1900 weight=2; #app10-024
     #server  app10-087.i.ajkdns.com:1900 weight=1;
-    #server  app10-088.i.ajkdns.com:1900 weight=1;
-    server  app10-052.i.ajkdns.com:1900 weight=10;
-    server  app10-051.i.ajkdns.com:1900 weight=10;
+    #server  10.10.3.200:1900 weight=1; #app10-088
+    server  10.10.3.155:1900 weight=10; #app10-052
+    server  10.10.3.154:1900 weight=10; #app10-051
 }
 
 upstream upstream-java-shorturl{
-    server  app10-021.i.ajkdns.com:1900 weight=2;
-    server  app10-024.i.ajkdns.com:1900 weight=2;
+    server  10.10.3.22:1900 weight=2; #app10-021
+    server  10.10.3.152:1900 weight=2; #app10-024
     #server  app10-087.i.ajkdns.com:1900 backup;
-    #server  app10-088.i.ajkdns.com:1900 backup;
-    server  app10-052.i.ajkdns.com:1900 weight=10;
-    server  app10-051.i.ajkdns.com:1900 weight=2;
+    #server  10.10.3.200:1900 backup; #app10-088
+    server  10.10.3.155:1900 weight=10; #app10-052
+    server  10.10.3.154:1900 weight=2; #app10-051
 }
 
 upstream upstream-java-yui{
-    server  app10-052.i.ajkdns.com:1900;
-    server  app10-051.i.ajkdns.com:1900;
+    server  10.10.3.155:1900; #app10-052
+    server  10.10.3.154:1900; #app10-051
 }
 
 
 ###touch.anjuke.com for java
 
 upstream upstream-java-touchweb-nospeed{
-    server  app10-088.i.ajkdns.com:50093 weight=1; #app10-088
+    server  10.10.3.200:50093 weight=1; #app10-088 #app10-088
     # server  app10-050.i.ajkdns.com:50093 weight=3; #app10-050
 }
 
 upstream upstream-java-touchweb-speed{
-    server  app10-021.i.ajkdns.com:50093 weight=1; #app10-021
-    server  app10-024.i.ajkdns.com:50093 weight=1; #
+    server  10.10.3.22:50093 weight=1; #app10-021 #app10-021
+    server  10.10.3.152:50093 weight=1; # #app10-024
 }
 
 ###touch.anjuke.com for java
@@ -200,7 +200,7 @@ upstream upstream-java-service{
     server  10.10.3.155:1900 weight=10; #app10-052
     server  10.10.3.154:1900 weight=2; #app10-051
     #server  app10-087.i.ajkdns.com:1900 backup;
-    #server  app10-088.i.ajkdns.com:1900 backup;
+    #server  10.10.3.200:1900 backup; #app10-088
 }
 
 upstream upstream-java-service-ifx {
