@@ -63,7 +63,7 @@ upstream upstream-java-yui{
 
 upstream upstream-java-touchweb-nospeed{
     server  10.10.3.200:50093 weight=1; #app10-088 #app10-088
-    # server  app10-050.i.ajkdns.com:50093 weight=3; #app10-050
+    # server  10.10.3.153:50093 weight=3; #app10-050 #app10-050
 }
 
 upstream upstream-java-touchweb-speed{
