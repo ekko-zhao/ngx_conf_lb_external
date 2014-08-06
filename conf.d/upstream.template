@@ -514,8 +514,11 @@ upstream user-jinpu {
 }
 
 upstream user-include{
-    server 10.10.3.153:1700; #app10-050
-    server 10.10.3.154:1700; #app10-051
+    server 10.10.3.153:1700 weight=10; #app10-050
+    server 10.10.3.154:1700 weight=10; #app10-051
+    server 10.10.3.128:1700 weight=1; #app10-151
+    server 10.10.3.129:1700 weight=1; #app10-152
+
 }
 
 upstream kfs-site-php {
