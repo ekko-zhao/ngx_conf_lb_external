@@ -30,7 +30,7 @@ upstream upstream-java-loupan{
 ###xxx.aifang.com/comet/app-loupan/
 
 upstream upstream-java-loupan-comet{
-    #server  app10-018.i.ajkdns.com:50090 weight=1;
+    #server  10.10.3.19:50090 weight=1; #app10-018
     server  app10-020.i.ajkdns.com:50090 weight=900000;
 }
 
