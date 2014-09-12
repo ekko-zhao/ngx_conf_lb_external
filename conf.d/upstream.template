@@ -313,9 +313,9 @@ upstream anjuke-member {
 }
 
 upstream user-member {
-    server 10.10.3.200:80 weight=1; #app10-088
+    server 10.10.3.200:80 weight=10; #app10-088
     server 10.10.6.181:80 weight=4; #xapp10-028
-    server 10.10.6.180:80 weight=10; #xapp10-027
+    server 10.10.6.180:80 weight=1; #xapp10-027
 }
   
 upstream mendian {
