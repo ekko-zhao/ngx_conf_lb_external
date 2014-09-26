@@ -31,44 +31,44 @@ upstream upstream-java-loupan{
 
 upstream upstream-java-loupan-comet{
     #server  10.10.3.19:50090 weight=1; #app10-018
-    server  10.10.3.21:50090 weight=900000; #app10-020
+    server  app10-020.i.ajkdns.com:50090 weight=900000;
 }
 
 ###service.a.aifang.com/ip2city/
 upstream upstream-java-ip2city{
-    server  10.10.3.22:1900 weight=2; #app10-021
-    server  10.10.3.152:1900 weight=2; #app10-024
+    server  app10-021.i.ajkdns.com:1900 weight=2;
+    server  app10-024.i.ajkdns.com:1900 weight=2;
     #server  app10-087.i.ajkdns.com:1900 weight=1;
-    #server  10.10.3.200:1900 weight=1; #app10-088
-    server  10.10.3.155:1900 weight=10; #app10-052
-    server  10.10.3.154:1900 weight=10; #app10-051
+    #server  app10-088.i.ajkdns.com:1900 weight=1;
+    server  app10-052.i.ajkdns.com:1900 weight=10;
+    server  app10-051.i.ajkdns.com:1900 weight=10;
 }
 
 upstream upstream-java-shorturl{
-    server  10.10.3.22:1900 weight=2; #app10-021
-    server  10.10.3.152:1900 weight=2; #app10-024
+    server  app10-021.i.ajkdns.com:1900 weight=2;
+    server  app10-024.i.ajkdns.com:1900 weight=2;
     #server  app10-087.i.ajkdns.com:1900 backup;
-    #server  10.10.3.200:1900 backup; #app10-088
-    server  10.10.3.155:1900 weight=10; #app10-052
-    server  10.10.3.154:1900 weight=2; #app10-051
+    #server  app10-088.i.ajkdns.com:1900 backup;
+    server  app10-052.i.ajkdns.com:1900 weight=10;
+    server  app10-051.i.ajkdns.com:1900 weight=2;
 }
 
 upstream upstream-java-yui{
-    server  10.10.3.155:1900; #app10-052
-    server  10.10.3.154:1900; #app10-051
+    server  app10-052.i.ajkdns.com:1900;
+    server  app10-051.i.ajkdns.com:1900;
 }
 
 
 ###touch.anjuke.com for java
 
 upstream upstream-java-touchweb-nospeed{
-    server  10.10.3.200:50093 weight=1; #app10-088 #app10-088
-    # server  10.10.3.153:50093 weight=3; #app10-050 #app10-050
+    server  app10-088.i.ajkdns.com:50093 weight=1; #app10-088
+    # server  app10-050.i.ajkdns.com:50093 weight=3; #app10-050
 }
 
 upstream upstream-java-touchweb-speed{
-    server  10.10.3.22:50093 weight=1; #app10-021 #app10-021
-    server  10.10.3.152:50093 weight=1; # #app10-024
+    server  app10-021.i.ajkdns.com:50093 weight=1; #app10-021
+    server  app10-024.i.ajkdns.com:50093 weight=1; #
 }
 
 ###touch.anjuke.com for java
@@ -116,8 +116,8 @@ upstream upstream-chart-cdn {
 
 upstream upstream-string-match {
     server 10.10.3.22:52005; #app10-021
-    server 10.10.3.111:52005; #app10-120
-    server 10.10.3.116:52005; #app10-121
+    server 10.10.3.150:52005; #app10-022
+    #server 10.10.3.151:52005; #app10-023
 }
 
 upstream upstream-service-segment {
@@ -200,7 +200,7 @@ upstream upstream-java-service{
     server  10.10.3.155:1900 weight=10; #app10-052
     server  10.10.3.154:1900 weight=2; #app10-051
     #server  app10-087.i.ajkdns.com:1900 backup;
-    #server  10.10.3.200:1900 backup; #app10-088
+    #server  app10-088.i.ajkdns.com:1900 backup;
 }
 
 upstream upstream-java-service-ifx {
@@ -220,6 +220,14 @@ upstream upstream-java-touchweb{
     # server  10.10.3.153:1902 weight=500; #app10-050
     server  10.10.3.154:1902 weight=200; #app10-051
     server  10.10.3.155:1902 weight=500; #app10-052
+}
+
+upstream m-anjuke-php {
+    server 10.10.3.117:1700 weight=10; #app10-118
+    server 10.10.3.118:1700 weight=10; #app10-119
+    server 10.10.3.125:1700 weight=20; #app10-148
+    server 10.10.3.161:1700 weight=20; #app10-200
+    server 10.10.3.162:1700 weight=20; #app10-201
 }
 
 upstream kfs-m-anjuke-php {
@@ -313,12 +321,9 @@ upstream anjuke-member {
 }
 
 upstream user-member {
-    server 10.10.3.200:80 weight=10; #app10-088
+    server 10.10.3.200:80 weight=1; #app10-088
     server 10.10.6.181:80 weight=4; #xapp10-028
-    #server 10.10.6.180:80 weight=1; #xapp10-027
-    server 10.10.3.117:1700 weight=1; #app10-118 
-    server 10.10.3.118:1700 weight=2; #app10-119
-    server 10.10.3.125:1700 weight=3; #app10-148
+    server 10.10.6.180:80 weight=10; #xapp10-027
 }
   
 upstream mendian {
@@ -348,7 +353,7 @@ upstream user-site-api {
 
 upstream open-api {
    server 10.10.3.30:8088 weight=2;
-   #server 10.10.6.154:8088 weight=1;
+   server 10.10.6.154:8088 weight=1;
 }
 
 upstream upstream-weiliao {
@@ -484,11 +489,35 @@ upstream other {
 # User
 # ====
 
+upstream user-zu-jinpu {
+    server  10.10.3.117:1700 weight=2; #app10-118
+    server  10.10.3.118:1700 weight=2; #app10-119
+    server  10.10.3.125:1700 weight=4; #app10-148
+    server  10.10.3.161:1700 weight=4; #app10-200
+    server  10.10.3.162:1700 weight=4; #app10-201
+}
+
+upstream user-zu {
+    server  10.10.3.117:1700 weight=10; #app10-118
+    server  10.10.3.118:1700 weight=10; #app10-119
+    server  10.10.3.125:1700 weight=20; #app10-148
+    server  10.10.3.161:1700 weight=20; #app10-200
+    server  10.10.3.162:1700 weight=20; #app10-201
+}
+
+upstream user-jinpu {
+    server  10.10.3.117:1700 weight=10; #app10-118
+    server  10.10.3.118:1700 weight=10; #app10-119
+    server  10.10.3.125:1700 weight=20; #app10-148
+    server  10.10.3.161:1700 weight=20; #app10-200
+    server  10.10.3.162:1700 weight=20; #app10-201
+}
+
 upstream user-include{
     server 10.10.3.153:1700 weight=10; #app10-050
     server 10.10.3.154:1700 weight=10; #app10-051
-    server 10.10.3.128:1700 weight=10; #app10-151
-    server 10.10.3.129:1700 weight=10; #app10-152
+    server 10.10.3.128:1700 weight=1; #app10-151
+    server 10.10.3.129:1700 weight=1; #app10-152
 
 }
 
@@ -538,8 +567,6 @@ upstream i-app {
 upstream pages-ajkcdn {
     server 10.10.3.153:1700; #app10-050
     server 10.10.3.154:1700; #app10-051
-    server 10.10.3.128:1700; #app10-151
-    server 10.10.3.129:1700; #app10-152
 }
 
 upstream upstream-java-adm {
