@@ -554,8 +554,8 @@ upstream sms {
 }
 
 upstream cms {
-    server 10.10.6.186:8080; #xapp10-031
-    server 10.10.6.187:8080; #xapp10-032
+    server 10.10.9.58:80; #xapp10-114
+    server 10.10.9.39:80; #xapp10-115
 }
 
 upstream i-app {

@@ -29,3 +29,6 @@ deny 222.186.12.182;
 
 #20140928 m.anjuke.com/error/propout
 deny 121.40.87.200;
+
+#20141029  fang.anjuke.com
+deny 119.188.36.2;
