@@ -327,14 +327,9 @@ upstream user-member {
 }
   
 upstream mendian {
-    server 10.10.3.185:20080 weight=20; #app10-135
-    server 10.10.3.199:20080 weight=20; #app10-139
+    #server 10.10.3.185:20080; #app10-135
+    server 10.10.3.199:80; #app10-139
 } 
-
-upstream include-mendian {
-    server 10.10.3.185:20080; #app10-135
-    server 10.10.3.185:20080; #app10-135
-}
 
 upstream api-anjuke {
     server 10.10.3.122:1700 weight=16; #app10-115
