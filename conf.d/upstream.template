@@ -286,7 +286,6 @@ upstream aifang-chart {
 
 upstream aifang-varnish{
     server 10.10.3.47:30080; #app10-049
-    server 10.10.3.20:40080 backup; #app10-019
     server 10.10.3.21:40080 backup; #app10-020
 }
 
@@ -597,7 +596,6 @@ upstream apns-api {
 }
 
 upstream xinfang-prism {
-    server 10.10.3.20:40080; #app10-019
     server 10.10.3.21:40080; #app10-020
 }
 
