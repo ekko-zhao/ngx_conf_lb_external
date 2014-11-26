@@ -326,7 +326,7 @@ upstream user-member {
 }
   
 upstream mendian {
-    server 10.10.3.185:20080; #app10-135
+    server 10.10.3.185:80; #app10-135
     server 10.10.3.199:80; #app10-139
 } 
 
