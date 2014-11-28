@@ -300,7 +300,12 @@ upstream anjuke-bbs {
 }
 
 upstream my-app {
-    {%24%}
+    server 10.10.3.32:20090 weight=17; #App10-034
+    server 10.10.3.33:20090 weight=16; #app10-035
+    server 10.10.3.34:20090 weight=13; #app10-036
+    server 10.10.3.83:20090 weight=20; #app10-083
+    server 10.10.3.97:20090 weight=40; #app10-133
+    server 10.10.3.163:20090 weight=40; #app10-163
 }
 
 # upstream my-cd {
