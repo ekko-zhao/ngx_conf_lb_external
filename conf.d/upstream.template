@@ -355,7 +355,8 @@ upstream user-site-api {
 
 upstream open-api {
    server 10.10.3.30:8088 weight=2;
-   server 10.10.6.154:8088 weight=1;
+#   server 10.10.6.154:8088 weight=1;
+   server 10.10.9.30:8088 weight=1;
 }
 
 upstream upstream-weiliao {
