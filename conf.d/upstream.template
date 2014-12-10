@@ -92,7 +92,7 @@ upstream upstream-php-sites {
 ### city.aifang.com
 upstream upstream-php-varnish{
     hash $uri;
-    server  10.10.3.36:8081;  #app10-038
+#    server  10.10.3.36:8081;  #app10-038
     server  10.10.3.39:8081;  #app10-041
 }
 
@@ -415,7 +415,7 @@ upstream varnish {
     server 10.10.3.3:20080 backup; #app10-002
 }
 upstream one_anjuke {
-    server 10.10.6.208:41180; #xapp10-078
+    server 10.10.9.66:41180; #xapp10-148
     server 10.10.6.166:8081 backup; #xapp10-017
 }
 
