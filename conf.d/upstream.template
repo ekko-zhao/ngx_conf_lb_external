@@ -452,11 +452,12 @@ upstream forum-app {
 # ICS
 # ===
 upstream ics-beta {
-    server 10.10.6.210:8080; #xapp10-049
+    #server 10.10.6.210:8080; #xapp10-049
+    server 10.10.9.30:8080; #xapp10-152
 }
 upstream ics {
+    server 10.10.9.30:8080; #xapp10-152
     #server 10.10.6.165:8088; #xapp10-016
-    {%91%}
 }
 
 upstream idc10-squid {
