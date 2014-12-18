@@ -79,13 +79,13 @@ upstream upstream-java-touchweb-beta{
 ### www api my vip one press ...
 upstream upstream-php-member {
     server  10.10.3.139:80; #app10-183
-    server  10.10.3.109:80 backup; #app10-145
+    server  10.10.3.94:80 backup; #app10-145
 }
 
 ### city no cache ...
 upstream upstream-php-sites {
     server  10.10.3.21:40080 weight=1; #app10-020
-    server  10.10.3.109:80 weight=50; #app10-145
+    server  10.10.3.94:80 weight=50; #app10-145
     server  10.10.3.139:80 weight=50; #app10-183
 }
 
@@ -93,7 +93,7 @@ upstream upstream-php-sites {
 upstream upstream-php-varnish{
     hash $uri;
     server  10.10.3.36:8081;  #app10-038
-    server  10.10.3.39:8081;  #app10-041
+#    server  10.10.3.39:8081;  #app10-041
 }
 
 ### online preview
@@ -109,7 +109,7 @@ upstream upstream-online-dev {
 upstream upstream-chart-cdn {
     #consistent_hash $http_x_forwarded_for;
     server  10.10.3.21:40080; #app10-020
-    server  10.10.3.109:80; #app10-145
+    server  10.10.3.94:80; #app10-145
     server  10.10.3.139:80; #app10-183
 }
 
@@ -232,7 +232,7 @@ upstream m-anjuke-php {
 
 upstream kfs-m-anjuke-php {
     server 10.10.3.140:80; #app10-184
-    server 10.10.3.109:80; #app10-145
+    server 10.10.3.94:80; #app10-145
 }
 
 upstream  anjuke-v1-backend {
@@ -277,7 +277,7 @@ upstream  anjuke-include-member {
 
 upstream aifang-member {
     server 10.10.3.21:40080 weight=1; #app10-020
-    server 10.10.3.109:80 weight=50; #app10-145
+    server 10.10.3.94:80 weight=50; #app10-145
     server 10.10.3.139:80 weight=50; #app10-183
 }
 upstream aifang-chart {
@@ -528,7 +528,7 @@ upstream user-include{
 
 upstream kfs-site-php {
     server 10.10.3.21:40080 weight=1; #app10-020
-    server 10.10.3.109:80 weight=50; #app10-145
+    server 10.10.3.94:80 weight=50; #app10-145
     server 10.10.3.139:80 weight=50; #app10-183
 }
 
