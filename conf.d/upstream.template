@@ -93,7 +93,7 @@ upstream upstream-php-sites {
 upstream upstream-php-varnish{
     hash $uri;
     server  10.10.3.36:8081;  #app10-038
-#    server  10.10.3.39:8081;  #app10-041
+    server  10.10.3.39:8081;  #app10-041
 }
 
 ### online preview
