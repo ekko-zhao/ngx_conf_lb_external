@@ -486,6 +486,11 @@ upstream oa {
     server 10.10.6.239:80 backup; #xapp10-081
 }
 
+upstream oauth2.0 {
+    server 10.10.3.25:12345; #app10-027
+    server 10.10.6.239:12345; #xapp10-081
+}
+
 upstream other {
     server 10.10.6.221:80;
     server 10.10.6.232:80;
