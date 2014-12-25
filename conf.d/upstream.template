@@ -278,7 +278,8 @@ upstream  anjuke-include-member {
 upstream aifang-member {
     server 10.10.3.21:40080 weight=1; #app10-020
     server 10.10.3.94:80 weight=50; #app10-130
-    server 10.10.3.139:80 weight=50; #app10-183
+#    server 10.10.3.139:80 weight=50; #app10-183
+    server 10.10.3.109:80 weight=50; #app10-145
 }
 upstream aifang-chart {
     server 10.10.3.47:80; #app10-049
