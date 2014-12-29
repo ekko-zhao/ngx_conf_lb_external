@@ -8,7 +8,8 @@ upstream upstream-java-one {
     #server  10.10.3.116:50080 backup; # app10-121
 
     #Added by roban 20141226
-    server  10.10.3.116:50080;
+    server  10.10.3.116:50080; # xapp10-121
+    server  10.10.9.77:50080; # xapp10-184
 }
 
 ###service.a.aifang.com
@@ -19,7 +20,8 @@ upstream upstream-java-service-loupan {
     #server  10.10.3.116:50080 backup; # app10-121
 
     #Added by roban 20141226
-    server  10.10.3.116:50080;
+    server  10.10.3.116:50080; # xapp10-121
+    server  10.10.9.77:50080; # xapp10-184
 }
 
 #app##service.a.aifang.com/app-sms/
@@ -212,7 +214,8 @@ upstream upstream-java-service{
 }
 
 upstream upstream-java-service-ifx {
-    server 10.10.3.116:50080 ; #app10-121
+    server 10.10.3.116:50080 ; # app10-121
+    server  10.10.9.77:50080; # xapp10-184
     #server 10.10.3.111:50080 ; #app10-120
 }
 
@@ -301,7 +304,8 @@ upstream aifang-varnish{
 
 upstream upstream-java-msc {
     #server 10.10.3.111:50084; #app10-120
-    server 10.10.3.116:50084; #app10-121
+    server 10.10.3.116:50084; # app10-121
+    server 10.10.9.77:50084; # xapp10-184
 }
 
 upstream anjuke-bbs {
