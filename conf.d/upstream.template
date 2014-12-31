@@ -615,3 +615,7 @@ upstream upstream-mobile-static {
     server  10.10.3.92:1700 backup; # app10-128
 }
 
+upstream user-cookie {
+    server  10.10.3.190:1700; # app10-137
+#    server  10.10.9.59:1700; # xapp10-104
+}
