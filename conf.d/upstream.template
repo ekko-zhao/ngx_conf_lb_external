@@ -612,12 +612,6 @@ upstream user-anjuke-other {
     server  10.10.3.162:1700 weight=20; #app10-201
 }
 
-
-upstream job-anjuke-wxwall {
-    server 10.10.3.21:40080; #app10-020
-}
-
-
 upstream upstream-mobile-static {
     server  10.10.3.91:1700; # app10-127
     server  10.10.3.92:1700 backup; # app10-128
