@@ -595,6 +595,7 @@ upstream user-varnish {
 }
 
 upstream apns-api {
+    server 10.10.3.91:1904; #app10-127
     server 10.10.3.92:1904; #app10-128
     server 10.10.3.93:1904; #app10-129
 }
