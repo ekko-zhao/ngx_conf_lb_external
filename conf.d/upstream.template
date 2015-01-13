@@ -600,7 +600,8 @@ upstream apns-api {
 }
 
 upstream xinfang-prism {
-    server 10.10.3.21:40080; #app10-020
+    #server 10.10.3.21:40080; #app10-020
+    server 10.10.3.20:80; #app10-019
 }
 
 upstream user-anjuke-other {
