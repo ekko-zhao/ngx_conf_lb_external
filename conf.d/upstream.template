@@ -117,14 +117,6 @@ upstream upstream-online-dev {
     server 10.10.3.151:40080; #app10-023
 }
 
-upstream upstream-chart-cdn {
-    #consistent_hash $http_x_forwarded_for;
-    server  10.10.3.21:40080; #app10-020
-    server  10.10.3.94:80; #app10-130
-    server  10.10.3.139:80; #app10-183
-}
-
-
 upstream upstream-string-match {
     server 10.10.3.22:52005; #app10-021
     server 10.10.3.150:52005; #app10-022
@@ -299,11 +291,6 @@ upstream aifang-member {
 }
 upstream aifang-chart {
     server 10.10.3.47:80; #app10-049
-}
-
-upstream aifang-varnish{
-    server 10.10.3.47:30080; #app10-049
-    server 10.10.3.21:40080 backup; #app10-020
 }
 
 upstream upstream-java-msc {
