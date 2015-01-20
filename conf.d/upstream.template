@@ -241,7 +241,16 @@ upstream  anjuke-v1-backend {
 }
 
 upstream  anjuke-v2-backend {
-    {%44%}
+    server 10.10.3.126:1700 weight=80; #app10-149
+    server 10.10.3.127:1700 weight=80; #app10-150
+    server 10.10.3.128:1700 weight=50; #app10-151
+    server 10.10.3.129:1700 weight=50; #app10-152
+    server 10.10.3.159:1700 weight=80; #app10-198
+    server 10.10.3.160:1700 weight=80; #app10-199
+    server 10.10.3.166:1700 weight=50; #app10-202
+    server 10.10.3.167:1700 weight=50; #app10-203
+    server 10.10.3.168:1700 weight=50; #app10-204
+    server 10.10.9.59:1700  weight=1;  #xapp10-104
 }
 
 upstream  anjuke-v2-sale {
@@ -250,11 +259,21 @@ upstream  anjuke-v2-sale {
 }
 
 upstream anjuke-sale {
-    {%50%}
+    server 10.10.3.130:1700 weight=20; #app10-153
+    server 10.10.3.131:1700 weight=20; #app10-154
+    server 10.10.3.166:1700 weight=10; #app10-202
+    server 10.10.3.167:1700 weight=10; #app10-203
+    server 10.10.3.168:1700 weight=10; #app10-204
+    server 10.10.9.59:1700  weight=1; #xapp10-104
 }
 
 upstream  anjuke-prop-view {
-    {%51%}
+    server 10.10.3.130:1700 weight=20; #app10-153
+    server 10.10.3.131:1700 weight=20; #app10-154
+    server 10.10.3.166:1700 weight=10; #app10-202
+    server 10.10.3.167:1700 weight=10; #app10-203
+    server 10.10.3.168:1700 weight=10; #app10-204
+    server 10.10.9.59:1700  weight=1; #xapp10-104
 }
 
 upstream  anjuke-pages {
@@ -591,6 +610,7 @@ upstream user-anjuke-other {
     server  10.10.3.125:1700 weight=20; #app10-148
     server  10.10.3.161:1700 weight=20; #app10-200
     server  10.10.3.162:1700 weight=20; #app10-201
+    server  10.10.9.59:1700  weight=1; # xapp10-104
 }
 
 upstream upstream-mobile-static {
