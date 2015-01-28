@@ -425,7 +425,6 @@ upstream varnish {
 }
 upstream one_anjuke {
     server 10.10.9.66:41180; #xapp10-148
-    server 10.10.6.166:8081 backup; #xapp10-017
 }
 
 upstream daimg01 {
