@@ -248,8 +248,8 @@ upstream  user-ershou-other {
 }
 
 upstream  user-anjuke-home {
-    server 10.10.3.126:1700; #app10-149
-    server 10.10.3.127:1700 backup; #app10-150
+    server 10.10.3.127:1700; #app10-150
+    server 10.10.3.126:1700 backup; #app10-149
 }
 
 upstream  anjuke-v2-sale {
