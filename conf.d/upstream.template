@@ -245,6 +245,7 @@ upstream  user-ershou-other {
     server 10.10.3.159:1700 weight=60; #app10-198
     server 10.10.3.128:1700 weight=50; #app10-151
     server 10.10.3.129:1700 weight=50; #app10-152
+    server 10.10.3.118:1700 weight=50; #app10-119
     #server 10.10.3.126:1700 weight=40; #app10-149
 }
 
