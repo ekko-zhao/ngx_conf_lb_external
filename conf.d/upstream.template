@@ -172,7 +172,7 @@ upstream kfs-m-anjuke {
 }
 
 upstream kfs-m-anjuke-balance {
-#    server 10.10.3.140:80; #app10-184
+    server 10.10.3.140:80; #app10-184
     server 10.10.3.94:80; #app10-130
     server 10.10.3.109:80; #app10-145
 }
