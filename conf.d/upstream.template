@@ -520,10 +520,6 @@ upstream kfs-site-php {
     #server 10.10.3.140:80 weight=50; #app10-184
 }
 
-upstream kfs-beta-php {
-    server 10.10.3.151:40080; #app10-023
-}
-
 upstream jinpu-app-anjuke {
     server 10.10.3.45:80; #app10-047
 }
