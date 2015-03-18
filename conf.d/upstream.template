@@ -250,10 +250,8 @@ upstream  user-ershou-other {
 }
 
 upstream  user-anjuke-home {
-    #server 10.10.3.127:1700; #app10-150
-    #server 10.10.3.126:1700 backup; #app10-149
-    server 10.10.3.127:1700 weight=2; #app10-150
-    server 10.10.3.126:1700 weight=2; #app10-149
+    server 10.10.3.127:1700 weight=10; #app10-150
+    server 10.10.3.187:1700 weight=2; #xapp10-195
 }
 
 upstream  anjuke-v2-sale {
@@ -576,12 +574,8 @@ upstream chat-cms {
 
 upstream user-varnish {
     server 10.10.3.39:8080 weight=100000; #app10-041 varnish
-    server 10.10.3.126:1700 weight=1; #app10-149
-    server 10.10.3.127:1700 weight=1; #app10-150
-#    server 10.10.3.128:1700 weight=1; #app10-151
-#    server 10.10.3.129:1700 weight=1; #app10-152
-#    server 10.10.3.159:1700 weight=1; #app10-198
-#    server 10.10.3.160:1700 weight=1; #app10-199
+    server 10.10.3.127:1700 weight=10; #app10-150
+    server 10.10.3.187:1700 weight=2; #xapp10-195
 }
 
 upstream apns-api {
@@ -614,5 +608,9 @@ upstream upstream-mobile-static {
 
 upstream user-cookie {
     server  10.10.3.190:1700; # app10-137
-#    server  10.10.9.59:1700; # xapp10-104
+}
+
+upstream user-58-api {
+    server  10.10.3.160:1700; # app10-199
+    server  10.10.3.126:1700; # app10-149
 }
